@@ -55,7 +55,7 @@
             this.cb_role.FormattingEnabled = true;
             this.cb_role.Items.AddRange(new object[] {
             "Admin",
-            "Teaching Staff",
+            "Teacher",
             "Student"});
             this.cb_role.Location = new System.Drawing.Point(265, 205);
             this.cb_role.Name = "cb_role";

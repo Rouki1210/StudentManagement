@@ -35,7 +35,7 @@ namespace StudentManagement
 
         private bool check_login()
         {
-            string filePath = "D:\\C#\\StudentManagement\\user.txt";
+            string filePath = "user.txt";
             try
             {
                 using (StreamReader reader = new StreamReader(filePath))
@@ -61,10 +61,27 @@ namespace StudentManagement
         {
            if (check_login())
             {
+                if(cb_role.Text == "Admin")
+                {
                 Form_Admin form_Admin = new Form_Admin();
                 this.Hide();
                 form_Admin.ShowDialog();
                 this.Close();
+                }
+                else if (cb_role.Text == "Student")
+                {
+                    Form_student form_Student = new Form_student();
+                    this.Hide(); 
+                    form_Student.ShowDialog(); 
+                    this.Close();
+                }
+                else
+                {
+                    Form_teacher form_Teacher = new Form_teacher();
+                    this.Hide();
+                    form_Teacher.ShowDialog();  
+                    this.Close();
+                }
             }
             else
             {

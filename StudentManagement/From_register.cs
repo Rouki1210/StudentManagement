@@ -20,15 +20,13 @@ namespace StudentManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string filePath = "D:\\C#\\StudentManagement\\register.txt";
+            string filePath = "register.txt";
             try
             {
                 StreamWriter writer = new StreamWriter(filePath);
                 string info = tb_username.Text + " " + tb_password.Text + " " + tb_phone.Text;
                 writer.WriteLine(info);
                 writer.Close();
-                MessageBox.Show("You login with admin role successfully " +
-                                "and the info saved to login.txt");
             }
             catch{}
 

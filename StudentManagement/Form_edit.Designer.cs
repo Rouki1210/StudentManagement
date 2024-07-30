@@ -86,6 +86,7 @@
             this.bt_sumbit.TabIndex = 28;
             this.bt_sumbit.Text = "Submit";
             this.bt_sumbit.UseVisualStyleBackColor = true;
+            this.bt_sumbit.Click += new System.EventHandler(this.bt_sumbit_Click);
             // 
             // tb_name
             // 
